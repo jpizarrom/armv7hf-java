@@ -6,7 +6,9 @@
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM jpizarrom/armv7hf-debian-qemu:0.1
+
+RUN [ "cross-build-start" ]
 
 # Install Java.
 RUN \
@@ -26,3 +28,5 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # Define default command.
 CMD ["bash"]
+
+RUN [ "cross-build-end" ]
