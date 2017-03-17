@@ -6,7 +6,7 @@
 #
 
 # Pull base image.
-FROM resin/armv7hf-debian-qemu
+FROM jpizarrom/armv7hf-debian-qemu:0.1
 
 RUN [ "cross-build-start" ]
 
